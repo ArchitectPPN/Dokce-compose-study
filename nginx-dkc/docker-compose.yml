@@ -3,7 +3,7 @@ services:
   nginx:
     image: nginx:1.16.0
     ports:
-      - "8088:80"
+      - "80:80"
       - "8099:8099"
     links:
       - php-fpm
