@@ -16,13 +16,13 @@ services:
 
   php-fpm:
     image: bitnami/php-fpm
+    links:
+          - mysql
+          - redis
     volumes:
       - "./www/:/var/www/html/"
       - "./php-fpm/php.ini:/etc/php/conf/php.ini"
-    links:
-      - mysql
-      - redis
- 
+
   mysql:
     image: mysql:5.7
     restart: always
