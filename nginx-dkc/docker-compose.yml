@@ -28,8 +28,12 @@ services:
     restart: always
     environment: 
         MYSQL_ROOT_PASSWORD: 123456
+        MYSQL_USER: ppn-dev
+        MYSQL_PASS: 123456
     volumes:
       - "./mysql/:/var/lib/mysql"
+      - "./mysql/conf/my.cnf:/etc/my.cnf"
+      - "./mysql/init:/docker-entrypoint-initdb.d/"
   
   redis:
     image: redis:4.0
