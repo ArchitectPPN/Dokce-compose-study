@@ -1,0 +1,8 @@
+[mysqld]
+server-id = 1
+port = 3306
+basedir = /var/lib/mysql
+datadir = /var/lib/mysql/data
+tmpdir  = /tmp
+socket  = /var/run/mysqld/mysqld.sock
+init_connect='SET NAMES utf8mb4'
