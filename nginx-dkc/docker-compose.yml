@@ -17,8 +17,8 @@ services:
   php-fpm:
     image: bitnami/php-fpm
     volumes:
-      - ./www:/var/www/html
-      - ./php-fpm/php.ini:/etc/php/conf/php.ini
+      - "./www:/var/www/html"
+      - "./php-fpm/php.ini:/etc/php/conf/php.ini"
     links:
       - mysql
       - redis
@@ -29,7 +29,11 @@ services:
     environment: 
         MYSQL_ROOT_PASSWORD: 123456
     volumes:
-      - /var/lib/mysql:/var/lib/mysql    
+      - "./mysql:/var/lib/mysql"
   
   redis:
     image: redis:4.0
+    volumes:
+      - "./redis/bak:/data"
+      - "./redis/conf/redis.conf:/usr/local/etc/redis/redis.conf"
+    command: redis-server /usr/local/etc/redis/redis.conf
