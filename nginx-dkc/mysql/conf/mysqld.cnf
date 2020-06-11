@@ -1,9 +1,0 @@
-[mysqld]
-server-id = 1
-port = 3306
-basedir = /var/lib/mysql
-datadir = /var/lib/mysql/mysqldata
-tmpdir  = /tmp
-socket  = /var/run/mysqld/mysqld.sock
-explicit_defaults_for_timestamp = true
-init_connect='SET NAMES utf8mb4'
