@@ -8,8 +8,8 @@ services:
     links:
       - php-fpm
     volumes:
-      - "./www:/var/www/html"
-      - "./nginx/sites:/etc/nginx/sites-enabled"
+      - "./www:/var/www/html/"
+      - "./nginx/sites/:/etc/nginx/sites-enabled/"
       - "./nginx/conf/default.conf:/etc/nginx/nginx.conf"
       - "./nginx/logs/:/var/nginx/logs/"
     command: [nginx-debug, '-g', 'daemon off;']
@@ -17,7 +17,7 @@ services:
   php-fpm:
     image: bitnami/php-fpm
     volumes:
-      - "./www:/var/www/html"
+      - "./www/:/var/www/html/"
       - "./php-fpm/php.ini:/etc/php/conf/php.ini"
     links:
       - mysql
@@ -29,11 +29,12 @@ services:
     environment: 
         MYSQL_ROOT_PASSWORD: 123456
     volumes:
-      - "./mysql:/var/lib/mysql"
+      - "./mysql/:/var/lib/mysql"
   
   redis:
     image: redis:4.0
     volumes:
-      - "./redis/bak:/data"
+      - "./redis/bak:/data/bak/"
+      - "./redis/logs:/var/logs/"
       - "./redis/conf/redis.conf:/usr/local/etc/redis/redis.conf"
     command: redis-server /usr/local/etc/redis/redis.conf
