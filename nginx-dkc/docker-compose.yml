@@ -31,7 +31,7 @@ services:
         MYSQL_USER: ppn-dev
         MYSQL_PASS: 123456
     volumes:
-      - "./mysql/:/var/lib/mysql"
+      - "./mysql/data/:/var/lib/mysql"
       - "./mysql/conf/my.cnf:/var/lib/mysql/conf/my.cnf"
       - "./mysql/init:/docker-entrypoint-initdb.d/"
   
