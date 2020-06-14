@@ -1,3 +1,11 @@
 .idea/
+
+# Nginx
 nginx-dkc/nginx/logs/*
+
+# Mysql
 nginx-dkc/mysql/data/*
+
+# Redis
+nginx-dkc/redis/logs/*
+nginx-dkc/redis/bak/*
