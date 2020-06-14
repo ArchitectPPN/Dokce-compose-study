@@ -1,2 +1,3 @@
 .idea/
 ./nginx-dkc/nginx/logs/
+./nginx-dkc/mysql/data/
