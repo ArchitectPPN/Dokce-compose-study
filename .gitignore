@@ -7,4 +7,5 @@ nginx-dkc/nginx/logs/*
 nginx-dkc/mysql/data/*
 
 # Redis
+nginx-dkc/redis/logs/*
 nginx-dkc/redis/bak/*
