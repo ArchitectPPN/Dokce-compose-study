@@ -9,3 +9,6 @@ nginx-dkc/mysql/data/*
 # Redis
 nginx-dkc/redis/logs/*
 nginx-dkc/redis/bak/*
+
+# www
+nginx-dkc/www/LaravelStudy
