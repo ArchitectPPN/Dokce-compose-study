@@ -5,6 +5,7 @@ services:
     ports:
       - "80:80"
       - "8099:8099"
+      - "9001:9001"
     links:
       - php-fpm
     volumes:
