@@ -1,0 +1,12 @@
+version: "2"
+services:
+  redis-master:
+    build:
+      context: ./redis/
+      dockerfile: Dockerfile
+    container_name: redis_master1.3
+    volumes:
+    - D:\Data:/home/soft_data/
+    ports:
+    - 6379:6379
+    tty: true
